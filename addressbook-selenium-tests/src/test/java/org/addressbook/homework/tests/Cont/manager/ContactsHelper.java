@@ -1,27 +1,15 @@
-package org.addressbook.homework.tests.Cont;
+package org.addressbook.homework.tests.Cont.manager;
 
+import org.addressbook.homework.tests.Cont.model.Contacts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 
-public class TestBase {
-    WebDriver wd;
+public class ContactsHelper {
+    public WebDriver wd;
 
-    @BeforeClass
-    public void setUp() {
-        wd = new ChromeDriver();
-        wd.get("http://localhost/addressbook");
-        login("admin", "secret");
-
-    }
-
-    public void login(String userName, String password) {
-        type(By.name("user"), userName);
-        type(By.name("pass"), password);
-        wd.findElement(By.cssSelector("input[type='submit']")).click();
+    public ContactsHelper(WebDriver wd) {
+        this.wd = wd;
     }
 
     public void type(By locator, String text) {
@@ -44,11 +32,6 @@ public class TestBase {
         type(By.name("address"), contacts.getAddress());
         type(By.name("mobile"), contacts.getMobile());
         type(By.name("email"), contacts.getEmail());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        wd.quit();
     }
 
     public void deleteContact() {
@@ -88,11 +71,11 @@ public class TestBase {
         }
     }
 
-    public boolean isContactPresent(){
+    public boolean isContactPresent() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public void returnToHomePage() {
-        wd.findElement(By.xpath("//a[contains(text(),'home')]")).click();
+    public int getContactCount() {
+        return wd.findElements(By.name("selected[]")).size();
     }
 }

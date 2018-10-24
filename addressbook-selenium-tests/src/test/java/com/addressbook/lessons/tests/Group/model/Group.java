@@ -1,4 +1,4 @@
-package com.addressbook.lessons.tests.Group;
+package com.addressbook.lessons.tests.Group.model;
 
 public class Group {
     public String groupName;

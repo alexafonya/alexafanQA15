@@ -1,4 +1,4 @@
-package org.addressbook.homework.tests.Cont;
+package org.addressbook.homework.tests.Cont.model;
 
 public class Contacts {
     public String firstname;

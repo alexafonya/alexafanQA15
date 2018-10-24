@@ -1,11 +1,12 @@
-package com.addressbook.lessons.tests.Group;
+package com.addressbook.lessons.tests.Group.tests;
 
+import com.addressbook.lessons.tests.Group.manager.ApplicationManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected final ApplicationManager app = new ApplicationManager ();
 
     @BeforeClass
     public void setUp() {
