@@ -1,7 +1,6 @@
-package org.addressbook.homework.tests.Cont.tests;
+package com.addressbook.lessons.tests.Group.tests;
 
-import org.addressbook.homework.tests.Cont.model.Contacts;
-import org.openqa.selenium.By;
+import com.addressbook.lessons.tests.Group.model.Contacts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +8,7 @@ public class ContactCreationTests extends TestBase {
 
     @Test
     public void testContactCreation() {
-        int before = app.getContacts().getContactCount();
+        int before = app.getContacts().getCount();
         app.getContacts().initContactCreation();
         app.getContacts().fillFormContact(
                 new Contacts()
@@ -19,10 +18,9 @@ public class ContactCreationTests extends TestBase {
                         .setMobile("0542334433")
                         .setEmail("vasya@gmail.com"));
         app.getContacts().submitContactCreation();
-        int after = app.getContacts().getContactCount();
-        Assert.assertEquals(after,before+1);
+        int after = app.getContacts().getCount();
+        Assert.assertEquals(after, before + 1);
     }
-
 
 
 }

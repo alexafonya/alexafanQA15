@@ -7,30 +7,37 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-    private GroupHelper groupHelper;
-    WebDriver wd;
+    public WebDriver wd;
+    GroupHelper groupHelper;
+    SessionHelper sessionHelper;
+    ContactsHelper contacts;
 
     public void start() {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook");
-        //login
+        sessionHelper = new SessionHelper(wd);
+        sessionHelper.openSite();
+        contacts = new ContactsHelper(wd);
         groupHelper = new GroupHelper(wd);
-        login("admin", "secret");
-
-    }
-
-    public void login(String username, String password) {
-        groupHelper.type(By.name("user"), username);
-        groupHelper.type(By.name("pass"), password);
-        groupHelper.click(By.cssSelector("input[type='submit']"));
+        sessionHelper.login("admin", "secret");
     }
 
     public void stop() {
         wd.quit();
     }
 
+    public void returnToHomePage() {
+        sessionHelper.click(By.xpath("//a[contains(text(),'home')]"));
+    }
+
+    public ContactsHelper getContacts() {
+        return contacts;
+    }
+
     public GroupHelper getGroupHelper() {
+
         return groupHelper;
     }
+
+
 }

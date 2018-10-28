@@ -1,6 +1,6 @@
-package org.addressbook.homework.tests.Cont.tests;
+package com.addressbook.lessons.tests.Group.tests;
 
-import org.addressbook.homework.tests.Cont.model.Contacts;
+import com.addressbook.lessons.tests.Group.model.Contacts;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,18 +16,18 @@ public class ContactModificationTests extends TestBase {
 
     @Test
     public void testContactModification() {
-        int before = app.getContacts().getContactCount();
+        int before = app.getContacts().getCount();
         app.getContacts().initContactModification();
         app.getContacts().fillFormContact(
                 new Contacts()
-                        .setAddress("Yalta")
-                        .setFirstname("Vasya")
-                        .setLastname("Pupkin")
+                        .setAddress("Gomel")
+                        .setFirstname("Jeka")
+                        .setLastname("Hropkin")
                         .setMobile("0542334433")
-                        .setEmail("vasya@gmail.com"));
+                        .setEmail("jenya@gmail.com"));
         app.getContacts().submitContactModification();
-        int after = app.getContacts().getContactCount();
-        Assert.assertEquals(after,before);
+        int after = app.getContacts().getCount();
+        Assert.assertEquals(after, before);
     }
 
 }
