@@ -6,9 +6,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_main.iml" group="addressbook-selenium-tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_test.iml" group="addressbook-selenium-tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logIn-trello-test.iml" filepath="$PROJECT_DIR$/.idea/modules/logIn-trello-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/qa15-trello-login-test.iml" filepath="$PROJECT_DIR$/.idea/modules/qa15-trello-login-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/qa15-trello-login-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/qa15-trello-login-test_main.iml" group="trello-login-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/qa15-trello-login-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/qa15-trello-login-test_test.iml" group="trello-login-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-start-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-start-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-start-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-start-tests_main.iml" group="selenium-start-tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-start-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-start-tests_test.iml" group="selenium-start-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-login-test.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-login-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-login-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-login-test_main.iml" group="trello-login-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trello-login-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trello-login-test_test.iml" group="trello-login-test" />
     </modules>
   </component>
 </project>

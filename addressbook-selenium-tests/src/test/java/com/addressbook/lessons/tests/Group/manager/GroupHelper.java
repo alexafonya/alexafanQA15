@@ -2,7 +2,6 @@ package com.addressbook.lessons.tests.Group.manager;
 
 import com.addressbook.lessons.tests.Group.model.Group;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 public class GroupHelper extends HelperBase{
