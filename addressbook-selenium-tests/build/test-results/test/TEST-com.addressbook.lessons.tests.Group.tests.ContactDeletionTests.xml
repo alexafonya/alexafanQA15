@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.lessons.tests.Group.tests.ContactDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-31T09:49:50" hostname="DESKTOP-8N96QM8" time="1.44">
-  <properties/>
-  <testcase name="testContactDeletion" classname="com.addressbook.lessons.tests.Group.tests.ContactDeletionTests" time="1.44"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
