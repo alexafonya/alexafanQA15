@@ -1,12 +1,13 @@
 package com.addressbook.lessons.tests.Group.manager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
+
+    NavigationHelper navigationHelper;
     public WebDriver wd;
     GroupHelper groupHelper;
     SessionHelper sessionHelper;
@@ -15,8 +16,9 @@ public class ApplicationManager {
     public void start() {
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
-        sessionHelper.openSite();
+        navigationHelper.openSite("http://localhost/addressbook");
         contacts = new ContactsHelper(wd);
         groupHelper = new GroupHelper(wd);
         sessionHelper.login("admin", "secret");
@@ -26,9 +28,6 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public void returnToHomePage() {
-        sessionHelper.click(By.xpath("//a[contains(text(),'home')]"));
-    }
 
     public ContactsHelper getContacts() {
         return contacts;
@@ -40,4 +39,7 @@ public class ApplicationManager {
     }
 
 
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
+    }
 }

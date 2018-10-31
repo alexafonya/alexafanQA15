@@ -2,17 +2,19 @@ package com.addressbook.lessons.tests.Group.tests;
 
 import com.addressbook.lessons.tests.Group.manager.ApplicationManager;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
-    ApplicationManager app = new ApplicationManager();
+   protected static ApplicationManager app = new ApplicationManager();
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() {
         app.start();
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown() {
         app.stop();
     }

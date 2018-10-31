@@ -9,9 +9,7 @@ public class SessionHelper extends HelperBase {
         super(wd);
     }
 
-    public void openSite() {
-        wd.get("http://localhost/addressbook");
-    }
+
 
     public void login(String userName, String password) {
         type(By.name("user"), userName);

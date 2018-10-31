@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.addressbook.lessons.tests.Group.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-10-31T09:50:00" hostname="DESKTOP-8N96QM8" time="2.477">
+  <properties/>
+  <testcase name="testGroupModification" classname="com.addressbook.lessons.tests.Group.tests.GroupModificationTests" time="2.477"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

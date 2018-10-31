@@ -10,7 +10,7 @@ public class ContactDeletionTests extends TestBase {
     public void preconditions() {
         if (!app.getContacts().isContactPresent())
             app.getContacts().createContact();
-        app.returnToHomePage();
+        app.getNavigationHelper().returnToHomePage();
 
     }
 
@@ -19,6 +19,7 @@ public class ContactDeletionTests extends TestBase {
         int before = app.getContacts().getCount();
         app.getContacts().initContactModification();
         app.getContacts().deleteContact();
+        app.getNavigationHelper().returnToHomePage();
         int after = app.getContacts().getCount();
         Assert.assertEquals(after, before - 1);
     }

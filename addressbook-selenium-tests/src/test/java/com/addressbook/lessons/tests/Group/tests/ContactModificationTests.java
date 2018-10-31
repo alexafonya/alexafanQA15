@@ -11,7 +11,7 @@ public class ContactModificationTests extends TestBase {
     public void preconditions() {
         if (!app.getContacts().isContactPresent())
             app.getContacts().createContact();
-        app.returnToHomePage();
+        app.getNavigationHelper().returnToHomePage();
     }
 
     @Test
@@ -26,6 +26,7 @@ public class ContactModificationTests extends TestBase {
                         .setMobile("0542334433")
                         .setEmail("jenya@gmail.com"));
         app.getContacts().submitContactModification();
+        app.getNavigationHelper().returnToHomePage();
         int after = app.getContacts().getCount();
         Assert.assertEquals(after, before);
     }
