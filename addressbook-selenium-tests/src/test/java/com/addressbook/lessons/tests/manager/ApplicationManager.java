@@ -22,7 +22,7 @@ public class ApplicationManager {
         this.browser = browser;
     }
 
-    public void start() {
+    public void  start() {
         if (browser.equals(BrowserType.CHROME)){
             wd = new ChromeDriver();
         }else if(browser.equals(BrowserType.FIREFOX )){
