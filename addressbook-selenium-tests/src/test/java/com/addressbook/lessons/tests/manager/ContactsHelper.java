@@ -29,7 +29,7 @@ public class ContactsHelper extends HelperBase{
     }
 
     public void deleteContact() {
-        click(By.cssSelector("[value='Delete']"));
+        click(By.cssSelector("input[type='submit']:nth-child(2)"));
     }
 
 
@@ -42,7 +42,7 @@ public class ContactsHelper extends HelperBase{
     }
 
     public void initContactModification() {
-        click(By.xpath("//a/img[@title='Edit']"));
+        click(By.cssSelector("td.center:nth-child(8) a > img[title='Edit']"));
     }
 
     public void createContact() {

@@ -14,7 +14,7 @@ public class NavigationHelper extends HelperBase{
     }
 
     public void returnToHomePage() {
-        click(By.xpath("//a[contains(text(),'home')]"));
+        click(By.linkText("home"));
     }
 
 

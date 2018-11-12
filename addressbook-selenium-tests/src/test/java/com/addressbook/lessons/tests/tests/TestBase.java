@@ -6,7 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
-   protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
+   protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.IE));
 
     @BeforeSuite
     public void setUp() {
@@ -14,7 +14,8 @@ public class TestBase {
     }
 
     @AfterSuite
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
         app.stop();
     }
 

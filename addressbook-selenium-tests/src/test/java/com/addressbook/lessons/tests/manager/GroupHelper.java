@@ -30,7 +30,7 @@ public class GroupHelper extends HelperBase{
 
 
     public void openGroupsPage() {
-        click(By.cssSelector("a[href='group.php']"));
+        click(By.linkText("groups"));
     }
 
     public void submitGroupModification() {
