@@ -23,7 +23,7 @@ public class GroupModificationTests extends TestBase {
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new Group()
                 .setGroupName("Modifico")
-                .setGroupHeder("heder2")
+                .setGroupHeader("heder2")
                 .setGroupFooter("chenged"));
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToGroupsPage();

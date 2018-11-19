@@ -59,7 +59,7 @@ public class GroupHelper extends HelperBase{
         initGroupCreation();
         fillGroupForm(new Group()
                 .setGroupName("test name")
-                .setGroupHeder("chico")
+                .setGroupHeader("chico")
                 .setGroupFooter("Footer"));
         submitGroupCreation();
         returnToGroupsPage();

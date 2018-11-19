@@ -15,22 +15,25 @@ public class GroupCreationTests extends TestBase {
     @DataProvider
     public Iterator <Object[]> validGroups() throws IOException {
         List<Object[]> list = new ArrayList<>();
-        BufferedReader reader =new BufferedReader(new FileReader(new File("src/test/resources/groups.csv")));
+
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.csv")));
         String line = reader.readLine();
-        String[] split = line.split(";");
-        while (line != null) {
+        while (line!=null){
+            String[] split=line.split(";");
             list.add(new Object[]{new Group()
                     .setGroupName(split[0])
-                    .setGroupHeder(split[1])
+                    .setGroupHeader(split[1])
                     .setGroupFooter(split[2])});
             line = reader.readLine();
         }
 
-       /* list.add(new Object[]{"test1","header1","footer1"});
-        list.add(new Object[]{"test2","header2","footer2"});
-        list.add(new Object[]{"t","h","f"});
-        list.add(new Object[]{"tH","hf","ft"});
-        list.add(new Object[]{"toooop","heeeeeeeeeeed","fooooooooot"});*/
+
+
+//        list.add(new Object[]{"test1","header1","footer1"});
+//        list.add(new Object[]{"test2","header2","footer2"});
+//        list.add(new Object[]{"t","h","f"});
+//        list.add(new Object[]{"tH","hf","ft"});
+//        list.add(new Object[]{"toooop","heeeeeeeeeeed","fooooooooot"});
 
         return list.iterator();
 

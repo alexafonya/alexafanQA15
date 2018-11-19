@@ -11,7 +11,7 @@ public class Group {
         return this;
     }
 
-    public Group setGroupHeder(String groupHeder) {
+    public Group setGroupHeader(String groupHeder) {
         this.groupHeder = groupHeder;
         return this;
     }
